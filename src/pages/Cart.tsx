@@ -21,8 +21,6 @@ const Cart = () => {
 		.reduce((prev, next) => prev + next, 0)
 		.toFixed(2);
 
-	console.log(products);
-
 	useEffect(() => {
 		const getProducts = async () => {
 			const promises: Promise<any>[] = [];

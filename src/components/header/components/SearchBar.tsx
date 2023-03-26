@@ -26,7 +26,7 @@ export const SearchBar = () => {
 				pathname: '/',
 			});
 		}
-	}, [searchQuery, navigate]);
+	}, [searchQuery]);
 
 	return (
 		<div className={style.searchBar}>

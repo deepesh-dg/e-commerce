@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
+import Cart from './pages/Cart';
 import Error from './pages/Error';
 import Home from './pages/Home';
+import Product from './pages/Product';
 import reportWebVitals from './reportWebVitals';
 import store from './state/store';
 import './style.scss';
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
 			{
 				path: '/',
 				element: <Home />,
+			},
+			{
+				path: 'product/:productId',
+				element: <Product />,
+			},
+			{
+				path: 'cart',
+				element: <Cart />,
 			},
 		],
 	},

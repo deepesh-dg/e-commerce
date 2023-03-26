@@ -16,10 +16,16 @@ export const SearchBar = () => {
 	}, [urlQuery]);
 
 	useEffect(() => {
-		navigate({
-			pathname: '/',
-			search: '?search_query=' + searchQuery,
-		});
+		if (searchQuery) {
+			navigate({
+				pathname: '/',
+				search: '?search_query=' + searchQuery,
+			});
+		} else {
+			navigate({
+				pathname: '/',
+			});
+		}
 	}, [searchQuery, navigate]);
 
 	return (

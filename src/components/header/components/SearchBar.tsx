@@ -1,5 +1,5 @@
 import React, { useEffect, useId, useState } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import style from './SearchBar.module.scss';
 
 export const SearchBar = () => {
@@ -10,6 +10,7 @@ export const SearchBar = () => {
 	const urlQuery = urlSearchParam.get('search_query') || '';
 
 	const navigate = useNavigate();
+	const location = useLocation();
 
 	useEffect(() => {
 		if (urlQuery && searchQuery !== urlQuery) setSearchQuery(urlQuery);
@@ -21,7 +22,7 @@ export const SearchBar = () => {
 				pathname: '/',
 				search: '?search_query=' + searchQuery,
 			});
-		} else {
+		} else if (location.pathname === '/') {
 			navigate({
 				pathname: '/',
 			});

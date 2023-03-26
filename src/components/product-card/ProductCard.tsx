@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { IProduct } from '../../common';
-import { AddToCartButton } from '../addToCartButton';
+import { AddToCartButton } from '../';
 import style from './ProductCard.module.scss';
 
 export const ProductCard = ({ product }: { product: IProduct }) => {

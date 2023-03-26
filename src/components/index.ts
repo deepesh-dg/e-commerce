@@ -5,3 +5,4 @@ export * from './product-cart/ProductCart';
 export * from './addToCartButton/AddToCartButton';
 export * from './cart-item/CartItem';
 export * from './empty-cart/EmptyCart';
+export * from './not-found/NotFound';

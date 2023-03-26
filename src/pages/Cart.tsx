@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { IProduct } from '../common';
 import { CartItem, EmptyCart } from '../components';
 import { conf } from '../conf';
-import { empty } from '../state/Cart';
+import useTitle from '../hooks/useTitle';
 import { useAppSelector } from '../state/store';
 import style from './Cart.module.scss';
 
@@ -38,6 +38,8 @@ const Cart = () => {
 
 		getProducts();
 	}, [cart]);
+
+	useTitle(`${cart.total} - Cart`);
 
 	return (
 		<div className='container'>

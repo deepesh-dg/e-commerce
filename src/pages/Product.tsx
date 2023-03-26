@@ -4,12 +4,15 @@ import { IProduct } from '../common';
 import { AddToCartButton } from '../components';
 import { conf } from '../conf';
 import useFetch from '../hooks/useFetch';
+import useTitle from '../hooks/useTitle';
 import style from './Product.module.scss';
 
 const Product = () => {
 	const { productId } = useParams();
 
 	const { data, error, loader } = useFetch<IProduct>(`${conf.api}products/${productId}`, {});
+
+	useTitle(data?.title || '');
 
 	return (
 		<div className='container'>

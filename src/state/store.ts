@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useSelector } from 'react-redux';
+import cartSlice from './Cart';
 import fetchCacheSlice from './fetchCacheSlice';
 
 const store = configureStore({
 	reducer: {
 		fetchCache: fetchCacheSlice,
+		cart: cartSlice,
 	},
 });
 

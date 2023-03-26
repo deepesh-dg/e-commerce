@@ -1,0 +1,40 @@
+.shimmer {
+	width: 100%;
+	position: relative;
+	border: 1px solid rgb(219, 219, 219);
+	padding: 0.5rem 0.5rem;
+	border-radius: 0.55rem;
+	overflow: hidden;
+
+	.image {
+		width: 100%;
+		padding-top: 75%;
+		background-color: #e4e4e4;
+		margin-bottom: 0.25rem;
+		overflow: hidden;
+	}
+
+	.titlePrice {
+		padding: 0.25rem 0rem;
+		display: flex;
+		gap: 1rem;
+
+		.title {
+			width: 70%;
+			height: 1.5rem;
+			background-color: #e4e4e4;
+		}
+
+		.price {
+			width: 30%;
+			height: 1.5rem;
+			background-color: #e4e4e4;
+		}
+	}
+
+	.btn {
+		margin-top: 0.25rem;
+		background-color: #e4e4e4;
+		height: 2.5rem;
+	}
+}
